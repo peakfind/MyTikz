@@ -1,0 +1,16 @@
+\documentclass[tikz,border=1pt]{standalone}
+\usetikzlibrary{mindmap}
+\begin{document}
+	\begin{tikzpicture}[mindmap,concept,concept color=red!50]
+		\node [concept] {Phase space}
+		      child[grow=left]  {node[concept] (classic) {vector space of field configurations}}
+		      child[grow=right] {node[concept] (quantum) {Hilbert space}};
+		\node [annotation,fill=blue!20,above] at (classic.north) {wave scattering};
+		\node [annotation,fill=blue!20,above] at (quantum.north) {quantum scattering; 
+			                                                      Hilbert space 
+			                                                      formulation of 
+			                                                      classical wave 
+			                                                      scattering, acoustic 
+			                                                      or electromagnetic};
+	\end{tikzpicture}
+\end{document}
